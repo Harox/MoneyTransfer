@@ -13,9 +13,9 @@ $getCurrenciesPreference = (new App\Repositories\CryptoCurrencyRepository())->ge
     @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_user') || Common::has_permission(\Auth::guard('admin')->user()->id, 'view_admins'))
         <li <?= $menu == 'users' ? ' class="active treeview"' : 'treeview' ?>>
             <a href="#">
-                <i class="glyphicon glyphicon-user"></i><span>Users</span>
+              <!--  <i class="glyphicon glyphicon-user"></i><span>Users</span>
                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-            </a>
+               </a>-->
             <ul class="treeview-menu">
                 @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_user'))
                     <li <?= isset($sub_menu) && $sub_menu == 'users_list' ? ' class="active"' : '' ?>>
@@ -38,10 +38,10 @@ $getCurrenciesPreference = (new App\Repositories\CryptoCurrencyRepository())->ge
     <!--merchants-->
     @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_merchant') || Common::has_permission(\Auth::guard('admin')->user()->id, 'view_merchant_payment'))
         <li <?= $menu == 'merchant' ? ' class="active treeview"' : 'treeview' ?>>
-            <a href="#">
+           <!-- <a href="#">
                 <i class="glyphicon glyphicon-user"></i><span>Merchants</span>
                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-            </a>
+            </a>-->
             <ul class="treeview-menu">
                 @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_merchant'))
                     <li <?= isset($sub_menu) && $sub_menu == 'merchant_details' ? ' class="active"' : '' ?>>
@@ -65,7 +65,7 @@ $getCurrenciesPreference = (new App\Repositories\CryptoCurrencyRepository())->ge
     <!-- transactions -->
     @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_transaction'))
         <li <?= $menu == 'transactions' ? ' class="active treeview"' : 'treeview' ?>>
-            <a href="{{ url('admin/transactions') }}"><i class="fa fa-history"></i><span>Transactions</span></a>
+            <a href="{{ url('admin/transactions') }}"><i class="fa fa-history"></i><span>History</span></a>
         </li>
     @endif
 
@@ -73,9 +73,9 @@ $getCurrenciesPreference = (new App\Repositories\CryptoCurrencyRepository())->ge
 
     <!-- deposits -->
     @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_deposit'))
-        <li <?= isset($menu) && $menu == 'deposits' ? ' class="active"' : '' ?>>
+        <!--<li <?= isset($menu) && $menu == 'deposits' ? ' class="active"' : '' ?>>
             <a href="{{ url('admin/deposits') }}"><i class="fa fa-arrow-down"></i><span>Deposits</span></a>
-        </li>
+        </li>-->
     @endif
 
     <!-- Payouts -->
@@ -88,7 +88,7 @@ $getCurrenciesPreference = (new App\Repositories\CryptoCurrencyRepository())->ge
     @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_transfer'))
         <li <?= isset($menu) && $menu == 'transfers' ? ' class="active treeview"' : 'treeview' ?>>
             <a href="#">
-                <i class="fa fa-exchange"></i></i><span>Transfers</span>
+                <i class="fa fa-exchange"></i></i><span>Transactions</span>
                 <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
             </a>
             <ul class="treeview-menu">
@@ -110,9 +110,9 @@ $getCurrenciesPreference = (new App\Repositories\CryptoCurrencyRepository())->ge
 
     <!-- Currencies & Fees -->
     @if (Common::has_permission(\Auth::guard('admin')->user()->id, 'view_currency'))
-        <li <?= isset($menu) && $menu == 'currency' ? ' class="active"' : '' ?>>
+     <!--   <li <?= isset($menu) && $menu == 'currency' ? ' class="active"' : '' ?>>
             <a href="{{ url('admin/settings/currency') }}"><i class="fa fa-money"></i><span>Currencies</span></a>
-        </li>
+        </li>-->
     @endif
 
 

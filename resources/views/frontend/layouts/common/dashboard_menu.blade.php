@@ -25,4 +25,4 @@
             <li class="{{ isset($menu) && ( $menu == 'account_setting' ) ? 'active' : '' }}"><a href="#">Account settings</a></li>
         </ul>
     </div>
-</div>
+    </div>
